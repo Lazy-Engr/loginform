@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #23242a;
+}
+.box {
+  position: relative;
+  width: 380px;
+  height: 420px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent,#45f3ff,#45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+.box::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent,#45f3ff,#45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+@keyframes animate {
+  0% 
+  {
+    transform: rotate(0deg);
+  }
+  100% 
+  {
+    transform: rotate(360deg);
+  }
+}
+.form {
+  position: absolute;
+  inset: 2px;
+  background: rgb(48, 42, 42);
+  z-index: 1;
+  border-radius: 8px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #45f3ff;
+}
+h2 {
+  font-size: 15px;
+  color: #45f3ff;
+  margin-top: 20px;  
+
+}
+input {
+  margin-top: 7px;
+  border-style: inset;
+  height: 30px;
+  width: 295px;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  border-bottom-style: solid;
+  border-width: 2px;
+}
+.inputbox {
+  margin-top: -45px;
+}
+.login {
+  background-color: #45f3ff;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 20px;
+  display: block;
+  height: 35px;
+  width: 80px;
+  margin-bottom: 10px;
+  width: 295px;
+  border-radius: 50px;
+  color: #1c1c1c;
+  cursor: pointer;
+}
+.forgot {
+  margin-bottom: 79px;
+  color: white;
+  margin-left: 190px;
+  font-size: small;
+}
+.forgot:hover {
+  color: #45f3ff;
+}
